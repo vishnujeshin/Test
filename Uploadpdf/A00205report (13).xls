@@ -1,0 +1,29 @@
+﻿<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<style type="text/css">
+	.report-red-neg-val {
+		color: red;
+	}
+</style>
+<table border="1">
+<thead>
+<tr>
+			<th>Responsible</th>
+			<th>Project name</th>
+			<th>Task ID</th>
+			<th>Description</th>
+			<th>Total Hrs</th>
+			<th>Today Hrs</th>
+			<th>Task status</th>
+	</tr>
+</thead>
+<tbody>	<tr>
+										<td>Nethaji</td>
+											<td>INDUSTRIAL</td>
+											<td>5902</td>
+											<td>Should be able to upload multiple documents in PDF or XLS format and should be able to download and view in local machine</td>
+											<td>14:00</td>
+											<td>8:24</td>
+											<td>In progress</td>
+						</tr>
+	</tbody>
+</table>

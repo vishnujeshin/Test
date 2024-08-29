@@ -1,0 +1,56 @@
+﻿<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<style type="text/css">
+	.report-red-neg-val {
+		color: red;
+	}
+</style>
+<table border="1">
+<thead>
+<tr>
+			<th>Responsible</th>
+			<th>Project name</th>
+			<th>Task ID</th>
+			<th>Description</th>
+			<th>Total Hrs</th>
+			<th>Today Hrs</th>
+			<th>Task status</th>
+	</tr>
+</thead>
+<tbody>	<tr>
+										<td>Nethaji</td>
+											<td>INDUSTRIAL</td>
+											<td>5738</td>
+											<td>03/10/2023 IndusModule: User Access-&gt; User RightsIn Asset tracking software, Edit Asset module is not reflecting in the user right permission function.</td>
+											<td>2:13</td>
+											<td>2:13</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td>INDUSTRIAL</td>
+											<td>5746</td>
+											<td>Update New Build and Database.(Polisetty)</td>
+											<td>1:21</td>
+											<td>1:21</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td>INDUSTRIAL</td>
+											<td>5748</td>
+											<td>Update New Build and Database.(Peps)  </td>
+											<td>1:37</td>
+											<td>1:37</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td>UNIPRO V1</td>
+											<td>5768</td>
+											<td>Settlement  Not working (BlueStar F&amp;B)</td>
+											<td>2:31</td>
+											<td>2:31</td>
+											<td>Completed</td>
+						</tr>
+	</tbody>
+</table>

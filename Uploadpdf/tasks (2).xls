@@ -1,0 +1,27 @@
+
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+
+<table border="1">
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>Task</th>
+		<th>Active</th>
+		<th>Status</th>
+		<th>Project</th>
+		<th>Planned duration</th>
+		<th>Time spent</th>
+			</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+			<td>5078</td><td>Reports &gt; Asset Status</td><td>21/09/2023 12:42:16 pm</td><td>Completed</td><td>INDUSTRIAL</td><td></td><td>02:06:41</td>		</tr>
+			<tr>
+			<td>5126</td><td>Operations - SF item Mapping</td><td>21/09/2023 02:53:41 pm</td><td>Completed</td><td>INDUSTRIAL</td><td></td><td>01:54:49</td>		</tr>
+			<tr>
+			<td>5128</td><td>Operations - SF Barcode Print</td><td>21/09/2023 04:03:31 pm</td><td>Completed</td><td>INDUSTRIAL</td><td></td><td>01:08:43</td>		</tr>
+			<tr>
+			<td>5130</td><td>Operations - FG item Mapping</td><td>21/09/2023 05:10:43 pm</td><td>Completed</td><td>INDUSTRIAL</td><td></td><td>01:07:06</td>		</tr>
+		</tbody>
+</table>

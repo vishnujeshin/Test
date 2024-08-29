@@ -1,0 +1,20 @@
+F. Cancel Task
+Endpoint: https://<dunzo_host>/api/v1/tasks/<task_id>/cancel
+Method: POST
+Use this API to cancel a Task.
+Tasks can only be canceled before the Delivery Partner has picked up the order (pickup_complete state).
+Please raise a support ticket if you want to cancel after that.
+Request Request
+curl -X POST \
+-H 'client-id: id' \
+-H 'Authorization: Token' \
+-H 'Accept-Language: en_US' \
+-H 'Content-Type: application/json' \
+-d '{
+"cancellation_reason": "Changed my mind"
+}' 
+
+
+
+Amma Naana ECR 
+Plot No.22, East Coast Road(ECR),Raja Nagar,Neelankarai,Chennai-600115

@@ -1,0 +1,47 @@
+﻿<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<style type="text/css">
+	.report-red-neg-val {
+		color: red;
+	}
+</style>
+<table border="1">
+<thead>
+<tr>
+			<th>Responsible</th>
+			<th>Project name</th>
+			<th>Task ID</th>
+			<th>Description</th>
+			<th>Total Hrs</th>
+			<th>Today Hrs</th>
+			<th>Task status</th>
+	</tr>
+</thead>
+<tbody>	<tr>
+										<td>Nethaji</td>
+											<td> INDUSTRIAL</td>
+											<td>6348</td>
+											<td>Should be able to upload multiple documents in PDF or XLS format and should be able to download and view in local machine.( Asset DC Return screen)</td>
+											<td>2:38</td>
+											<td>2:38</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td> INDUSTRIAL</td>
+											<td>6378</td>
+											<td> should be able to download and view in local machine(DC Report screen)</td>
+											<td>3:11</td>
+											<td>3:11</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td> INDUSTRIAL</td>
+											<td>6380</td>
+											<td>should be able to download and view in local machine(Handover Report screen)</td>
+											<td>1:53</td>
+											<td>1:53</td>
+											<td>Completed</td>
+						</tr>
+	</tbody>
+</table>

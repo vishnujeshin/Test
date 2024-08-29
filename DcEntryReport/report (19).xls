@@ -1,0 +1,38 @@
+﻿<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<style type="text/css">
+	.report-red-neg-val {
+		color: red;
+	}
+</style>
+<table border="1">
+<thead>
+<tr>
+			<th>Responsible</th>
+			<th>Project name</th>
+			<th>Task ID</th>
+			<th>Description</th>
+			<th>Total Hrs</th>
+			<th>Today Hrs</th>
+			<th>Task status</th>
+	</tr>
+</thead>
+<tbody>	<tr>
+										<td>Nethaji</td>
+											<td> INDUSTRIAL</td>
+											<td>5906</td>
+											<td>Should be able to upload multiple documents in PDF or XLS format and should be able to download and view in local machine</td>
+											<td>8:05</td>
+											<td>6:13</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td>Unipro Retailpos V1.0</td>
+											<td>6256</td>
+											<td>Reports not shown in correct  </td>
+											<td>1:09</td>
+											<td>1:09</td>
+											<td>Completed</td>
+						</tr>
+	</tbody>
+</table>

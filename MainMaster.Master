@@ -1,0 +1,535 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="AssetMobileApplication.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Asset Mobile Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon-->
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link href="font/css/font.css" rel="stylesheet" />
+    <link href="font/css/icon.css" rel="stylesheet" />
+    <%----------------------------------------------------------- CSS File -----------------------------------------------------------%>
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" type="text/css" />
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" type="text/css" />
+    <!-- Morris Chart Css-->
+    <link href="plugins/morrisjs/morris.css" rel="stylesheet" type="text/css" />
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="css/themes/all-themes.css" rel="stylesheet" type="text/css" />
+    <!-- Colorpicker Css -->
+    <link href="plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" type="text/css" />
+    <!-- Dropzone Css -->
+    <link href="plugins/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+    <!-- Jquery-UI Css -->
+    <link href="plugins/jquery-ui/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <!-- Chosen Css -->
+    <link href="plugins/chosen/chosen.css" rel="stylesheet" />
+    <!-- Jquery-Confirm Css -->
+    <link href="plugins/jquery-confirm/css/jquery-confirm.css" rel="stylesheet" />
+    <!-- Sweetalert Css -->
+    <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <!-- Jquery-Toast Css -->
+    <link href="plugins/jquery-toast/css/jquery.toast.css" rel="stylesheet" />
+
+    <!-- Custmoize Css -->
+    <link href="css/common-styles.css" rel="stylesheet" />
+    <link href="css/pages.css" rel="stylesheet" />
+    <link href="css/pagination.css" rel="stylesheet" />
+
+    <%------------------------------------------------------------ JS File ------------------------------------------------------------%>
+    <!-- Jquery Core Js -->
+    <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core Js -->
+    <script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.js"></script>
+    <!-- Jquery-UI Js -->
+    <script type="text/javascript" src="../plugins/jquery-ui/js/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        function ShowPopupMessageBox(message) {
+            $(function () {
+                $.alert({
+                    title: 'Message',
+                    content: message,
+                    animation: 'scale',
+                    animateFromElement: false,
+                    closeAnimation: 'scale',
+                    escapeKey: 'Close',
+                    buttons: {
+                        okay: {
+                            text: 'Ok',
+                            btnClass: 'btn-blue',
+                            keys: ['enter']
+                        }
+                    }
+                });
+            });
+        };
+    </script>
+
+    <script type="text/javascript">
+        function ShowToastError(message) {
+            $.toast({
+                heading: 'Error',
+                icon: 'error',
+                text: message,
+                position: 'top-right'
+            })
+        };
+
+        function ShowToastSuccess(message) {
+            $.toast({
+                heading: 'Success',
+                text: message,
+                position: 'top-right',
+                icon: 'success'
+            })
+        };
+    </script>
+    <script type="text/javascript">
+        function pageLoad() {
+            $("select").chosen({ width: '100%' }); // width in px, %, em, etc 
+            $("input[type=checkbox]").addClass("filled-in chk-col-indigo");
+            $("input[type=radio]").addClass("with-gap radio-col-indigo");
+        }
+        function fncAllowOnlyNumbers(event) {
+            try {
+                if ((event.which != 46 || event.which == 190 || event.which == 110) && (event.which < 48 || event.which > 57)) {
+                    event.preventDefault();
+                }
+            }
+            catch (err) {
+                ShowToastError(err.message);
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="theme-red">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <!-- Page Loader -->
+        <div class="page-loader-wrapper">
+            <div class="loader">
+                <div class="preloader">
+                    <div class="spinner-layer pl-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>Please wait...</p>
+            </div>
+        </div>
+        <!-- #END# Page Loader -->
+
+        <!-- Top Bar -->
+        <nav class="navbar">
+
+            <div class="container-fluid">
+                <div class="col-md-6">
+                    <a href="javascript:void(0);" class="bars"></a>
+<%-- <a class="navbar-brand" href="../frmHome.aspx">
+                   <img src="/images/AssetImage.jpg"  style="display: block; max-width: 97%; width: 258px; height: 49px;background-color:azure;border-end-end-radius:2px;border-end-start-radius:-2px;  margin-left: 0; " />
+                   </a>--%>
+                    <div class="navbar-brand" style="padding-top: 0px; padding-left: 0px;">
+    <img src="https://i.postimg.cc/nzpcQFrD/Asset-Image.jpg" alt="Logo" style="display: block; max-width: 97%; width: 258px; height: 49px; background-color: azure; border-end-end-radius: 2px; border-end-start-radius: 2px; margin-left: 0;">
+</div>
+</div>
+
+</div>
+
+                    <%--<a class="navbar-brand" href="../frmHome.aspx">
+                        <img src="../images/CompanyLogo.jpg" style="display: block; max-width: 100%; width: 240px; height: 50px" />
+                    </a>--%>
+                </div>
+                <div class="col-md-6">
+                    <div style="float: right;">
+
+                        <i class="material-icons" style="float: right; margin-top: 10px; cursor: pointer; color: #fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">arrow_drop_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <asp:Label ID="lblLoginUserName" runat="server" Style="font-size: 10px; padding-left: 5px;" Text="User Name"></asp:Label>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="lnkbtnLogOut" runat="server" OnClick="btnLogOut_Click">Sign Out</asp:LinkButton>
+                            </li>
+
+                        </ul>
+                        <asp:Image ID="imgpreview" runat="server" Style="float: right; border: 1px solid #fff; background: #fff; border-radius: 50%; margin-top: 8px; margin-right: 5px;" Height="30px" Width="30px" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- #Top Bar -->
+        <section>
+            <!-- Left Sidebar -->
+            <aside id="leftsidebar" class="sidebar">
+                <!-- User Info -->
+
+                <!-- #User Info -->
+
+                <!-- Menu -->
+                <div class="menu" style="background: #073068;">
+                    <ul class="list">
+                        <%--<li class="active">
+                            <a href="../frmHome.aspx">
+                                <span>HOME</span>
+                            </a>
+                        </li>--%>
+                        <li class="active">
+                            <a href="../DashBord/frmDashBord.aspx">
+
+                                <span>DashBoard</span>
+
+                            </a>
+                            <%--<ul class="ml-menu">
+                                <li>
+                                    <a href="../Operations/frmPacking.aspx">Packing </a>                                  
+                                </li>
+                            </ul>--%>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>User Access</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptUserAccess" runat="server" OnItemDataBound="rptUserAccess_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkUserAccess" runat="server">
+                                                <div class="dropdown-div" id="UserAccessIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li>
+                                    <a href="../UserAccess/frmUserGroupMaster.aspx">User Group</a>
+                                </li>
+                                <li>
+                                    <a href="../UserAccess/frmUserMaster.aspx">User Master</a>
+                                </li>
+                                <li>
+                                    <a href="../UserAccess/frmUserRights.aspx">User Rights</a>
+                                </li>--%>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>Masters</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptMaster" runat="server" OnItemDataBound="rptMaster_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkMaster" runat="server">
+                                                <div class="dropdown-div" id="MasterIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li>
+                                    <a href="../Asset Master/frmDepartmentMaster.aspx">Department</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmBrandMaster.aspx">Brand</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmCategoryMaster.aspx">Category</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmSubCategoryMaster.aspx">Sub Category</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmClassMaster.aspx">Class</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmLocationMaster.aspx">Location</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmBlockMaster.aspx">Block</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmFloorMaster.aspx">Floor</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmRoomMaster.aspx">Room</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmCubicalMaster.aspx">Cubical</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmEmployeeMaster.aspx">Employee</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset Master/frmVendorMaster.aspx">Vendor</a>
+                                </li>--%>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <%--<i class="material-icons">home</i>--%>
+                                <span>Assets</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptAssets" runat="server" OnItemDataBound="rptAssets_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkAssets" runat="server">
+                                                <div class="dropdown-div" id="AssetsIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li>
+                                    <a href="../Asset/frmAddAssets.aspx">Add Assets</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset/frmMainPage.aspx">View Assets</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset/frmAssetTransfer.aspx">Asset Transfer</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset/frmAssetTask.aspx">Asset Verification</a>
+                                </li>--%>
+                                <%--<li>
+                                    <a href="javascript:void(0);">CREATE ASSET CATEGORY</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">CALCULATE DEPRICATION </a>
+                                </li>--%>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>Asset Management</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptAssetManagement" runat="server" OnItemDataBound="rptAssetManagement_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkAssetManagement" runat="server">
+                                                <div class="dropdown-div" id="AssetManagementIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li>
+                                    <a href="../Asset/frmAssetRequest.aspx">Asset Request</a>
+                                </li>
+                                <li>
+                                    <a href="../Asset/AssetRequestApproval.aspx">Request Approval</a>
+                                </li>
+                                <li>
+                                    <a href="../AssetManagement/frmAssetAssign.aspx">Asset Assigning</a>
+                                </li>
+                                <li>
+                                    <a href="../AssetManagement/frmAssetAudit.aspx">Asset Audit</a>
+                                </li>
+                                <li>
+                                    <a href="../AssetManagement/frmAssetHandOver.aspx">Asset HandOver</a>
+                                </li>
+                                <li>
+                                    <a href="../AssetManagement/frmAssetDisposal.aspx">Asset Disposal</a>
+                                </li>--%>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>Purchase</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptPurchase" runat="server" OnItemDataBound="rptPurchase_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkPurchase" runat="server">
+                                                <div class="dropdown-div" id="PurchaseIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li>
+                                    <a href="../Purchase/frmGRN.aspx">Purchase Order</a>
+                                </li>--%>
+                                <%--<li>
+                                    <a href="../Purchase/frmGRN.aspx">GRN</a>
+                                </li>--%>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>Delivery Challan</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptDeliveryChallan" runat="server" OnItemDataBound="rptDeliveryChallan_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkDeliveryChallan" runat="server">
+                                                <div class="dropdown-div" id="DeliveryChallanIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--<li>
+                                    <a href="../DeliveryChallan/frmDCEntry.aspx">DC Entry</a>
+                                </li>
+                                <li>
+                                    <a href="../DeliveryChallan/frmDCApproval.aspx">DC Approval</a>
+                                </li>
+                                <li>
+                                    <a href="../DeliveryChallan/frmDCPrint.aspx">DC Print</a>
+                                </li>
+                                <li>
+                                    <a href="../DeliveryChallan/frmDCReturn.aspx">DC Return</a>
+                                </li>
+                                <li>
+                                    <a href="../DeliveryChallan/frmDCReport.aspx">DC Report</a>
+                                </li>--%>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <%--<i class="material-icons">home</i>--%>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <asp:Repeater ID="rptReports" runat="server" OnItemDataBound="rptReports_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HlnkReports" runat="server">
+                                                <div class="dropdown-div" id="ReportsIn" runat="server">
+                                                </div>
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                                    <li>
+            <a href="../Reports/Assethistory.aspx">Asset History</a>
+            <a href="../Reports/AssetAssingReport.aspx">Asset Assigning History</a>
+        </li>
+                  
+                                <%--<li>
+                                    <a href="../Reports/frmAssetStatus.aspx">Asset Status</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetDetailsRpt.aspx">Asset Detail</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetAuditReport.aspx">Asset Audit</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetHandOver.aspx">Asset HandOver</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetDisposalRpt.aspx">Asset Disposal</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetTrackingRpt.aspx">Asset Tracking</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetAMCRpt.aspx">Asset AMC</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetWarrantyRpt.aspx">Asset Warranty</a>
+                                </li>
+                                <li>
+                                    <a href="../Reports/frmAssetGRNRpt.aspx">Asset GRN</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"></a>
+                                </li>--%>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- #Menu -->
+
+               <%-- <!-- Footer -->
+                <div class="legal" style="height: 3%">
+                    <div class="copyright">
+                        &copy; 2020 <a>Unipro Tech Solutions Pvt Ltd </a>
+                    </div>
+
+                    <div class="version">
+                        <b>Version: </b>1.0.5
+               
+                    </div>
+                </div>
+                <!-- #Footer--%> -->
+            </aside>
+            <!-- #END# Left Sidebar -->
+        </section>
+
+        <section class="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+            </asp:ContentPlaceHolder>
+
+        </section>
+
+    </form>
+
+    <%------------------------------------------------------------ JS File ------------------------------------------------------------%>
+
+    <!-- Slimscroll Plugin Js -->
+    <script type="text/javascript" src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script type="text/javascript" src="../plugins/node-waves/waves.js"></script>
+    <!-- Custom Js -->
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <!-- Bootstrap Colorpicker Js -->
+    <script type="text/javascript" src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <!-- Dropzone Plugin Js -->
+    <script type="text/javascript" src="../plugins/dropzone/dropzone.js"></script>
+    <!-- Chosen Plugin Js -->
+    <script type="text/javascript" src="../plugins/chosen/chosen.jquery.js"></script>
+    <script type="text/javascript">
+        $("select").chosen({ width: '100%' }); // width in px, %, em, etc
+    </script>
+    <!-- Jquery-Confirm Plugin Js -->
+    <script type="text/javascript" src="../plugins/jquery-confirm/js/jquery-confirm.js"></script>
+    <!-- SweetAlert Plugin Js -->
+    <script type="text/javascript" src="../plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- Jquery Toast Js -->
+    <script src="../plugins/jquery-toast/js/jquery.toast.js"></script>
+    <!-- Jquery Session -->
+    <script src="../js/jquerysession.js"></script>
+    <!-- Jquery Only Number -->
+    <script src="../js/jquery.number.js"></script>
+    <!-- Common Js  -->
+    <script src="../js/jsCommon.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[type=checkbox]").addClass("filled-in chk-col-indigo");
+            $("input[type=radio]").addClass("with-gap radio-col-indigo");
+        });
+    </script>
+</body>
+</html>

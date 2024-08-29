@@ -1,0 +1,47 @@
+﻿<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<style type="text/css">
+	.report-red-neg-val {
+		color: red;
+	}
+</style>
+<table border="1">
+<thead>
+<tr>
+			<th>Responsible</th>
+			<th>Project name</th>
+			<th>Task ID</th>
+			<th>Description</th>
+			<th>Total Hrs</th>
+			<th>Today Hrs</th>
+			<th>Task status</th>
+	</tr>
+</thead>
+<tbody>	<tr>
+										<td>Nethaji</td>
+											<td>INDUSTRIAL</td>
+											<td>5902</td>
+											<td>Should be able to upload multiple documents in PDF or XLS format and should be able to download and view in local machine</td>
+											<td>24:15</td>
+											<td>3:05</td>
+											<td>Completed</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td>INDUSTRIAL</td>
+											<td>5906</td>
+											<td>Should be able to upload multiple documents in PDF or XLS format and should be able to download and view in local machine</td>
+											<td>1:19</td>
+											<td>1:19</td>
+											<td>In progress</td>
+						</tr>
+		<tr>
+										<td>Nethaji</td>
+											<td>UNIPRO V1</td>
+											<td>6100</td>
+											<td> BlueStars    While confirming bills getting duplicate error bill number</td>
+											<td>2:21</td>
+											<td>2:21</td>
+											<td>Completed</td>
+						</tr>
+	</tbody>
+</table>
